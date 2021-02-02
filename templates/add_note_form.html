@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>⌈ℕ⌋ Noote Add/Edit</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
+    <script type="module" src="../static/script.js" defer></script>
+</head>
+<body>
+<div><h1><a href="/">⌈ℕ⌋ noote</a></h1></div>
+<div class="center"><h2>add new note</h2></div>
+<div class="center" id="add_note">
+    <div class="white_box">
+        <div class="center">
+
+            {% if not note %}
+                <form method="POST" action="/add_note" autocomplete="off" method="post">
+            {% else %}
+                <form method="POST" action="{{ url_for('edit_note', note_id=note.id) }}" autocomplete="off"
+                      method="post">
+            {% endif %}
+            <div class="center">
+                {% if not note %}
+                    <input type="text" name="title" placeholder="Enter note title" required>
+                {% else %}
+                    <input type="text" name="title" placeholder="Enter note title" value="{{ note.title }}" required>
+                {% endif %}
+            </div>
+            <div class="center">
+                {% if not note %}
+                    <textarea class="textarea" type="textarea" rows="50" name="content"
+                              placeholder="Your note goes here." required></textarea>
+                {% else %}
+                    <textarea class="textarea" type="textarea" rows="50" name="content"
+                              required>{{ note.content }}</textarea>
+                {% endif %}
+            </div>
+            <div class="center">
+                <input class="button" type="submit" value="submit">
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{#    <form method="POST" action = "/note_saved">#}
+{#        <div class="center">#}
+{#            <div class="white_box">#}
+{#                <div class="center">#}
+{#                        <p><input name="title" value="Enter note title"></p>#}
+{#                    </div>#}
+{#                    <div class="center">#}
+{#                        <p><textarea rows="10" cols="20" name="content">Note content goes here </textarea></p>#}
+{#                    </div>#}
+{#                    <a href='note_saved'><div class="button" type="submit" value="submit">Submit</div></a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </form>#}
+
+</body>
+</html>

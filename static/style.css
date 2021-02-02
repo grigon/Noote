@@ -1,0 +1,241 @@
+html {
+    background-color: #F2F4F5;
+    font-size: 8px;
+}
+
+body {
+    margin: 0 auto;
+    width: 80%;
+    /*display: block;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    font-family: Roboto;
+    margin-bottom: 4rem;
+    /*height: 60%;*/
+}
+
+h1 {;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #2a2f36;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 3rem;
+    color: #2a2f36;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #2a2f36;
+}
+
+p {
+    font-family: Roboto;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: medium;
+    line-height: 4rem;
+    color: #8e989d;
+}
+
+.note_on_main {
+    padding: 3rem 6rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 4rem rgba(65, 100, 125, 0.1);
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.logo {
+    justify-content: flex-start;
+
+.right {
+    justify-content: flex-end;
+
+}
+
+}
+
+.white_box {
+    width: 25%;
+    padding: 6rem 7rem 7rem 7rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 4rem rgba(65, 100, 125, 0.1);
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    text-decoration: none;
+    margin-top: 4rem;
+    font-family: Roboto;
+    font-weight: bold;
+    background-color: aquamarine;
+    color: #2a2f36;
+    font-size: x-large;
+    border-radius: 1rem;
+    padding: 2rem 6rem 2rem 6rem;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 2rem 2rem 4rem rgba(65, 100, 125, 0.1);
+}
+
+.button:hover {
+    transition-duration: 0.4s;
+    box-shadow: 0 2rem 4rem rgba(65, 100, 125, 0.2);
+
+}
+
+.round {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    align-items: center;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 7rem;
+    font-size: 6rem;
+    padding: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+.close {
+    float: right;
+    font-size: x-large;
+    font-weight: lighter;
+    color: #8e989d;
+}
+
+.close:hover {
+    color: cadetblue;
+
+}
+
+input {
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: #8e989d;
+    width: 100%;
+    font-family: Roboto;
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+.textarea {
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem !important;
+    color: #8e989d;
+    height: 30rem;
+    width: 37.5rem;
+    font-family: Roboto;
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+input:focus {
+    box-shadow: 0 2rem 4rem rgba(65, 100, 125, 0.2);
+    outline: none;
+    transition-duration: 500ms;
+}
+
+.btn_small {
+    width: 20%;
+    font-size: medium;
+    font-family: Roboto;
+    font-weight: normal;
+    color: #8e989d;
+    border: 0.25rem solid #8e989d;
+    padding: 1rem;
+    margin-left: 75%;
+    border-radius: 1rem;
+    background-color: none;
+}
+
+.notes_list {
+    display: grid;
+    /*grid-template-areas: 'note note note';*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 1.25rem;
+    width: 100%;
+}
+
+li {
+    float: left;
+    width: 100%;
+    /*justify-content: space-between;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+}
+
+.btn_small:hover {
+    color: cadetblue;
+    border: 0.25rem solid cadetblue;
+
+}
+
+textarea:focus {
+    box-shadow: 0 2rem 4rem rgba(65, 100, 125, 0.2);
+    border: none;
+    outline: none;
+    transition-duration: 500ms;
+}
+
+::placeholder {
+    color: #8e989d;
+    opacity: 0.5;
+}
+
+@media only screen and (max-device-width: 375px) {
+    html {
+        font-size: 16px;
+    }
+
+    .notes_list {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+@media only screen and (min-device-width: 376px) and (max-device-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+
+    .notes_list {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
